@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tours.Standard.BizNew", "Tours.Standard.BizNew\Tours.Standard.BizNew.csproj", "{2493628F-95D5-4062-8671-56E95D2C9A39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Screenshots", "Screenshots", "{26001FF4-21E5-4649-AEB5-06AF7DDE23E5}"
+	ProjectSection(SolutionItems) = preProject
+		WinFormScreen1.png = WinFormScreen1.png
+		WinFormScreen2.png = WinFormScreen2.png
+		WinFormScreen3.png = WinFormScreen3.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2493628F-95D5-4062-8671-56E95D2C9A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2493628F-95D5-4062-8671-56E95D2C9A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2493628F-95D5-4062-8671-56E95D2C9A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2493628F-95D5-4062-8671-56E95D2C9A39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8FA8A451-ECDC-4A61-AD45-F34166233401}
+	EndGlobalSection
+EndGlobal
