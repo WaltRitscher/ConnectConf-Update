@@ -3,11 +3,37 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Tours.Standard.UWP"
+	xmlns:BizNew='using:Tours.Standard.BizNew'
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<Pivot Title='Pivot'>
+			<PivotItem Header='Tours'>
+				<GridView x:Name='ToursGridView'
+									ItemsSource='{x:Bind AllTours}' >
+					<GridView.ItemTemplate>
+						<DataTemplate x:DataType='BizNew:Tour'>
+							<Grid Background='LightBlue'>
+								<StackPanel Margin='20' MaxWidth='400'>
+									<SymbolIcon Symbol='Street'/>
+									<TextBlock Text='{x:Bind TourName }' FontWeight='Bold' />
+									<TextBlock Text='{x:Bind Description }'  TextWrapping='Wrap' MinWidth='380' MinHeight='60'/>
+								</StackPanel>
+							</Grid>
+						</DataTemplate>
+					</GridView.ItemTemplate>
+					
+				</GridView>
+			</PivotItem>
+			<PivotItem Header='Tips'>
+				<Grid />
+			</PivotItem>
+			<PivotItem Header='Testimonials'>
+				<Grid />
+			</PivotItem>
+		</Pivot>
 
-    </Grid>
+	</Grid>
 </Page>

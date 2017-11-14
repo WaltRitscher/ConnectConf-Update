@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Tours.Standard.BizNew;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -17,14 +18,26 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Tours.Standard.UWP
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class MainPage : Page
+  /// <summary>
+  /// An empty page that can be used on its own or navigated to within a Frame.
+  /// </summary>
+  public sealed partial class MainPage : Page
+  {
+    public MainPage()
     {
-        public MainPage()
-        {
-            this.InitializeComponent();
-        }
+      this.InitializeComponent();
+
+     _allTours = Tours.Standard.BizNew.Tours.Current.GetTours();
+
     }
+
+    private List<Tour> _allTours;
+
+    public List<Tour> AllTours
+      {
+      get { return _allTours; }
+      set { _allTours = value; }
+    }
+
+  }
 }
