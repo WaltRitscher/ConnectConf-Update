@@ -28,7 +28,13 @@ namespace Tours.Standard.UWP
       this.InitializeComponent();
 
      _allTours = Tours.Standard.BizNew.Tours.Current.GetTours();
+      _toursCVS = new CollectionViewSource();
+      _toursCVS.IsSourceGrouped = true;
 
+      var regions = from t in _allTours
+                   group t by t.Region;
+      _toursCVS.Source = regions;
+      this.cvs.Source = regions;
     }
 
     private List<Tour> _allTours;
@@ -37,6 +43,12 @@ namespace Tours.Standard.UWP
       {
       get { return _allTours; }
       set { _allTours = value; }
+    }
+    private CollectionViewSource _toursCVS;
+
+    public CollectionViewSource ToursCVS {
+      get { return _toursCVS; }
+      set { _toursCVS = value; }
     }
 
   }
